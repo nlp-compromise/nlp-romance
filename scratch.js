@@ -1,16 +1,13 @@
 'use strict';
-var nlp = require('./src/index');
-// nlp.verbose(true);
-nlp.verbose('tagger');
-// const corpus = require('nlp-corpus');
-// let text = corpus.sotu.parsed()[0];
-// const fresh = require('./test/unit/lib/freshPrince.js');
+var nlpCore = require('./src/index');
+// nlp.verbose('tagger');
 
-// console.log(nlp('I\'m going to the shops').sentences().toPastTense().out());
+// nlp.tagger(function(ts) {
+//   console.log('hi!');
+//   return ts;
+// });
 
+nlpCore.build('hello world').debug();
 
-
-// var r = nlp('Zwar so argumentierten die Richter könnten diese Regeln unmittelbar nur auf den organisierten Verbandssport angewandt werden.');
-var r = nlp('das anders ');
-// console.log(r.terms().out('array'));
-r.debug();
+// var r = nlp('hello world');
+// r.debug();
